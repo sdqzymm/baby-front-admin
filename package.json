@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "prettier --write . && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prettier": "prettier --write .",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "normalize.css": "^8.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -36,10 +37,12 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
     "husky": "^7.0.0",
+    "naive-ui": "^2.16.2",
     "prettier": "^2.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "vfonts": "^0.1.0"
   },
   "config": {
     "commitizen": {
