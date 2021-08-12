@@ -1,5 +1,7 @@
 import {
   create,
+  NAnchor,
+  NAnchorLink,
   NButton,
   NCard,
   NConfigProvider,
@@ -8,6 +10,7 @@ import {
   NLayoutFooter,
   NLayoutHeader,
   NLayoutSider,
+  NMenu,
   NSpace
 } from 'naive-ui'
 
@@ -21,7 +24,10 @@ const naive = create({
     NLayoutHeader,
     NLayoutContent,
     NLayoutFooter,
-    NLayoutSider
+    NLayoutSider,
+    NAnchor,
+    NAnchorLink,
+    NMenu
   ]
 })
 

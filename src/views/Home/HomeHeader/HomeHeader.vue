@@ -8,7 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from 'vue'
 import { darkTheme } from 'naive-ui'
 import { BuiltInGlobalTheme } from 'naive-ui/lib/themes/interface'
 
@@ -16,6 +15,7 @@ const emit = defineEmits<{
   (event: 'themeChange', theme: BuiltInGlobalTheme | null): void
 }>()
 
+// 触发更改主题事件
 const handleThemeChange = (theme: BuiltInGlobalTheme | null) => {
   emit('themeChange', theme)
 }

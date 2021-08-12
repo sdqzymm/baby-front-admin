@@ -1,12 +1,14 @@
 <template>
-  <div class="aside">
-    {{ message }}
-  </div>
+  <aside-menu
+    :menuOptions="menuOptions"
+    :default-collapsed="defaultCollapsed"
+  ></aside-menu>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const message = ref('Aside')
+import AsideMenu from '@/common-ui/AsideMenu'
+import menuOptions from './config'
+const defaultCollapsed = false
 </script>
 
 <style scoped></style>
