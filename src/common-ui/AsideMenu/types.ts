@@ -1,3 +1,5 @@
+import type { VNode } from 'vue'
+
 interface menuOption {
   label: string
   id?: string | number
@@ -6,7 +8,7 @@ interface menuOption {
   children?: menuOption[]
   disabled?: boolean
   type?: string
-  icon?: any
+  icon?: string | (() => VNode)
 }
 
 export type { menuOption }
