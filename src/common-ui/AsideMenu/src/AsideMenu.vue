@@ -35,6 +35,7 @@ import {
   useRenderExpandIcon
 } from '../hooks'
 
+// props数据
 const props = defineProps({
   menuOptions: {
     type: Array as PropType<menuOption[]>,
@@ -46,11 +47,11 @@ const props = defineProps({
   }
 })
 
-// 控制菜单项折叠
-const collapsed = ref(props.defaultCollapsed)
-
 // 初始化菜单选项
 useMenuOptions(props.menuOptions)
+
+// 控制菜单项折叠
+const collapsed = ref(props.defaultCollapsed)
 </script>
 
 <style scoped></style>

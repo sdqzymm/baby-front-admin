@@ -6,7 +6,6 @@ import register from './register'
 import 'normalize.css'
 import 'vfonts/Lato.css'
 import '@/assets/css/index.scss'
-// import 'vfonts/FiraCode.css'
 
 const app = createApp(App)
 app.use(store)

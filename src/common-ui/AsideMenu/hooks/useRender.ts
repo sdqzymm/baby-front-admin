@@ -1,4 +1,4 @@
-import { h } from 'vue'
+import { h, VNode } from 'vue'
 import { NIcon } from 'naive-ui'
 import { BookmarkOutline, CaretDownOutline } from '@vicons/ionicons5'
 import { menuOption } from '../types'
@@ -11,8 +11,11 @@ export const useRenderMenuLabel = (option: menuOption) => {
 }
 
 export const useRenderMenuIcon = (option: menuOption) => {
-  if (!option.icon) return h(NIcon, null, { default: () => h(BookmarkOutline) })
-  return option.icon()
+  if (!option.icon) {
+    return h(NIcon, null, { default: () => h(BookmarkOutline) })
+  } else {
+    return (option.icon as () => VNode)()
+  }
 }
 
 export const useRenderExpandIcon = () => {
